@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".main.Login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop = "150dp"
+                android:layout_marginBottom="-10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:id="@+id/logo_container"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/logo_patech"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/textbox_container"
+                style="@style/form_container">
+
+                <EditText
+                    android:id="@+id/emailET"
+                    style="@style/form_edittext"
+                    android:drawableStart="@drawable/drawable_icon_usernames"
+                    android:drawableLeft="@drawable/drawable_icon_usernames"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/passET"
+                    style="@style/form_edittext"
+                    android:textColorHighlight="@null"
+                    android:drawableStart="@drawable/drawable_icon_locks"
+                    android:drawableLeft="@drawable/drawable_icon_locks"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/lupa_password"
+                    style="@style/default_text_app"
+                    android:layout_gravity="right"
+                    android:paddingRight="8dp"
+                    android:text="Lupa Password?"
+                    android:paddingEnd="8dp"
+                    android:fontFamily="@font/montserratbold"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_login"
+                    style="@style/login_register_button"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/base_layout"
+                    android:text="Login" />
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/black"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OR"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/montserratregular"
+                            android:padding="10dp"
+                            />
+
+
+                        <View
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/black"
+                            />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/google_login_button"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="Login dengan Google"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:drawablePadding="-15dp"
+                        android:fontFamily="@font/montserratregular"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:background="@drawable/base_layout_gf"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:drawableLeft="@drawable/drawable_icon_google"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/facebook_login_button"
+                        android:gravity="center"
+                        android:backgroundTint="#395693"
+                        android:fontFamily="@font/montserratregular"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:text="Login dengan Facebook"
+                        android:layout_height="45dp"
+                        android:paddingLeft="15dp"
+                        android:background="@drawable/base_layout_gf"
+                        android:drawableLeft="@drawable/drawable_icon_facebook"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tidakpunyakun"
+                        android:text="Don't have an account? "
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/patech_secondary"
+                        android:fontFamily="@font/montserratregular"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/registertext"
+                        android:layout_toRightOf="@+id/tidakpunyakun"
+                        android:text="Register."
+                        android:fontFamily="@font/montserratbold"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/patech_primary"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

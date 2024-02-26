@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "594308324442",
+    "project_id": "patech-xl-imdp",
+    "storage_bucket": "patech-xl-imdp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594308324442:android:d15f933baea5a5f336cc63",
+        "android_client_info": {
+          "package_name": "com.example.xl_imdp_patech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594308324442-4a83781ktr09agnr3pkg5krm95hdl43b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.xl_imdp_patech",
+            "certificate_hash": "5a392b845b97f9bdd17c0cf95623e799ec33c880"
+          }
+        },
+        {
+          "client_id": "594308324442-625q0n086gqgj6v9dhc6b31vpc093hmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBwCmJHNPPkY6yrlwEkQtin7DNFP4SZ_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594308324442-625q0n086gqgj6v9dhc6b31vpc093hmv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

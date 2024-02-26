@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dff0f3"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:background="@drawable/backrounds"
+        android:layout_width="match_parent"
+        android:layout_height="165dp">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/form_container"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textStyle="normal"
+                android:fontFamily="@font/montserratbold"
+                android:text="SENSOR"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/posisi_alat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/montserratbold"
+                android:text="UTARA"
+                android:textSize="33sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/lastUpdateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/montserratregular"
+                android:paddingLeft="2dp"
+                android:text="Update Terakhir 12.30"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="225dp">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout_home_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_marginTop="10dp"
+               android:weightSum="4"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:orientation="horizontal">
+
+               <LinearLayout
+                   android:gravity="center"
+                   style="@style/box_item_data">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="TEMP"
+                       android:layout_gravity="center"
+                       android:textSize="8sp"
+                       android:fontFamily="@font/montserratregular"
+                       android:textColor="@color/black"
+                       />
+
+                   <TextView
+                       android:id="@+id/temperatureRecent"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="25"
+                       android:fontFamily="@font/montserratbold"
+                       android:layout_gravity="center"
+                       android:textSize="26sp"
+                       android:textColor="@color/black"
+                       />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="CELCIUS"
+                       android:layout_gravity="center"
+                       android:textSize="8sp"
+                       android:fontFamily="@font/montserratregular"
+                       android:textColor="@color/black"
+                       />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   style="@style/box_item_data">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="HUM"
+                       android:fontFamily="@font/montserratregular"
+                       android:layout_gravity="center"
+                       android:textSize="8sp"
+                       android:textColor="@color/black"
+                       />
+                   <TextView
+                       android:id="@+id/humidityRecent"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="68"
+                       android:fontFamily="@font/montserratbold"
+                       android:textSize="26sp"
+                       android:layout_gravity="center"
+                       android:textColor="@color/black"
+                       />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="%"
+                       android:layout_gravity="center"
+                       android:fontFamily="@font/montserratregular"
+                       android:textSize="8sp"
+                       android:textColor="@color/black"
+                       />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   style="@style/box_item_data">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="RAIN"
+                       android:fontFamily="@font/montserratregular"
+                       android:layout_gravity="center"
+                       android:textSize="8sp"
+                       android:textColor="@color/black"
+                       />
+
+                   <TextView
+                       android:id="@+id/raindurRecent"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:fontFamily="@font/montserratbold"
+                       android:text="2.5"
+                       android:textColor="@color/black"
+                       android:textSize="26sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="JAM"
+                       android:fontFamily="@font/montserratregular"
+                       android:layout_gravity="center"
+                       android:textSize="8sp"
+                       android:textColor="@color/black"
+                       />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:gravity="center"
+                   android:background="@drawable/warning_backround"
+                   style="@style/box_item_data">
+
+                   <TextView
+                       android:id="@+id/statusPatech"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="NORMAL"
+                       android:fontFamily="@font/montserratbold"
+                       android:layout_gravity="center"
+                       android:textSize="13sp"
+                       android:textColor="@color/white"
+                       />
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/garden_sensor_info_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--            //UTARA-->
+                <LinearLayout
+                    android:id="@+id/sensor_utara"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/button_pressed"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/pgbar_utara"
+                        style="@style/progress_bar"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="UTARA"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:fontFamily="@font/montserratbold"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="NORMAL"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/montserratregular"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="TEMP"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            android:text="20.0"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="CELCIUS"
+                            style="@style/text_item_data_container"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="HUM"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="74"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="%"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="RAIN"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="3.2"
+                            android:fontFamily="@font/montserratbold"
+                            android:textSize="15sp"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="JAM"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+<!--            //SELATAN-->
+                <LinearLayout
+                    android:id="@+id/sensor_selatan"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/button_pressed"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/pgbar_selatan"
+                        style="@style/progress_bar"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="SELATAN"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:fontFamily="@font/montserratbold"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="WASPADA"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/montserratregular"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="TEMP"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            android:text="20.0"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="CELCIUS"
+                            style="@style/text_item_data_container"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="HUM"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="74"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="%"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="RAIN"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="3.2"
+                            android:fontFamily="@font/montserratbold"
+                            android:textSize="15sp"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="JAM"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+<!--            //TIMUR-->
+                <LinearLayout
+                    android:id="@+id/sensor_timur"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/button_pressed"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/pgbar_timur"
+                        style="@style/progress_bar"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="TIMUR"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:fontFamily="@font/montserratbold"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="NORMAL"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/montserratregular"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="TEMP"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            android:text="20.0"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="CELCIUS"
+                            style="@style/text_item_data_container"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="HUM"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="74"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="%"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="RAIN"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="3.2"
+                            android:fontFamily="@font/montserratbold"
+                            android:textSize="15sp"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="JAM"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+<!--            //BARAT-->
+                <LinearLayout
+                    android:id="@+id/sensor_barat"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/button_pressed"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/pgbar_barat"
+                        style="@style/progress_bar"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="BARAT"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:fontFamily="@font/montserratbold"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="SIAGA"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/montserratregular"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="TEMP"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            android:text="20.0"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="CELCIUS"
+                            style="@style/text_item_data_container"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="HUM"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="74"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/montserratbold"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="%"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_height="50dp"
+                        style="@style/box_item_data_container_container">
+
+                        <TextView
+                            android:text="RAIN"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="3.2"
+                            android:fontFamily="@font/montserratbold"
+                            android:textSize="15sp"
+                            style="@style/text_item_data_container"
+                            />
+
+                        <TextView
+                            android:text="JAM"
+                            style="@style/text_item_data_container"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

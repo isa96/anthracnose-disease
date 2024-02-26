@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".main.Register">
+
+    <LinearLayout
+        style="@style/form_container">
+
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/backbut"
+            android:layout_gravity="left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ret"/>
+
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:layout_width="260dp"
+            android:layout_gravity="left"
+            android:layout_height="wrap_content"
+            android:text="Hai Patechian,\nHere's your first step with us!"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="@font/montserratregular"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Email"
+            android:gravity="left"
+            android:fontFamily="@font/montserratregular"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/email_edittext"
+            android:hint="Email"
+            style="@style/form_edittext"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:text="Name"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:fontFamily="@font/montserratregular"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/username_edittext"
+            android:hint="Name"
+            style="@style/form_edittext"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:text="Pass"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:fontFamily="@font/montserratregular"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/password_edittext"
+            android:hint="Password"
+            style="@style/form_edittext"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:text="Confirm Pass"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:fontFamily="@font/montserratregular"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/confirm_pass_edittext"
+            android:hint="Confirm Password"
+            style="@style/form_edittext"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/form_container">
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/login_register_button"
+            android:layout_marginBottom="15dp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserratbold"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/base_layout"
+            app:backgroundTint="@null"
+            android:layout_height="60dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:text="You are completely safe"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/montserratbold"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Read our Terms and Condiitons"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/montserratregular"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

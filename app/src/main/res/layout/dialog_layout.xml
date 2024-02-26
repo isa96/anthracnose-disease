@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/base_layout_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cancel_dialog"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="right"
+            android:src="@drawable/cancel_remove"
+            android:layout_width="18dp"
+            android:layout_height="18dp"/>
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/patek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#4DA0B9"
+            android:fontFamily="@font/montserratbold"
+            android:text="WASPADA ANTRAKNOSA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserratregular"
+            android:text="Segera cek kondisi tanaman cabai Anda."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>
